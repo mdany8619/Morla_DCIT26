@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'AndyBold';
+    src: url(fonts/AndyBold.ttf) format('truetype');
+    font-weight: normal;
+}
+
+/*color palette
+F69F91
+533633
+CAD09E
+F2DB8D*/
+
+
+body{
+
+    background-color: #F69F91;
+    text-align: center;
+    margin: 20%;
+    font-family: 'AndyBold';
+    color: #533633;
+}
+
+h2{
+
+    font-family: 'AndyBold';
+    text-align: center;
+    color: #533633;
+    font-size: 40px;
+}
+
+button{
+
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.75em 1.5em;
+    background: none;
+    border: 0;
+}
+
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-items: center;
+}
+
+.div1{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+   
+}
+
+.div2{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.LumpiaWrapper{
+   
+    position: relative;
+    height: 150px; 
+    margin-top: 150px;
+    line-height: normal;
+}
+
+.fade-box{
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.fade-box.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    font-size: medium;
+
+  }
+
+  a:hover{
+    color:#F2DB8D;
+  }
+
+ a{
+    text-decoration: none;
+    color: #CAD09E;
+    font-size: 30px;
+  }
+
+  topright {
+
+    position: fixed;
+    top: 10px;
+    left: 20px;
+z-index: 1000;
+
+  }
+
+  #ABimg{
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  #abtMe{
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  #AboutMe{
+
+    align-self: center;
+  }
+
+  #PFtext{
+    font-size: 30px;
+  }
+
+  #Quiz{
+    font-family: 'AndyBold';
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+
+    img{ 
+    width: 500px;
+    height: 500px;
+    display:inline-block;
+    padding: 20px;
+            
+      }
+
+      p{
+        display: block;
+        text-align: center;
+        
+      }
+
+      a{
+
+        position: relative;
+
+      }
+  }
