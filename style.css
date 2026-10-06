@@ -99,9 +99,10 @@ img {
     text-decoration: none;
     color: #CAD09E;
     font-size: 30px;
+    padding: 10px;
   }
 
-  topright {
+  topright{
 
     position: fixed;
     top: 10px;
@@ -131,15 +132,30 @@ z-index: 1000;
 
   #PFtext{
     font-size: 30px;
+    padding: 10px;
   }
 
   #Quiz{
     font-family: 'AndyBold';
     font-size: 40px;
-    display: flex;
+   display: flex;
     justify-content: center;
 
-    img{ 
+    figure {
+    
+    margin: 0;
+    width: 100%; /* Or a pixel value like 200px */
+    
+        }
+
+    figure img {
+      display: inline-block;
+      width: 300px; /* Ensures the image doesn't overflow the figure */
+      height: auto;
+      
+            }
+
+    /*img{ 
     width: 500px;
     height: 500px;
     display:inline-block;
@@ -147,7 +163,42 @@ z-index: 1000;
             
       }
 
-      p{
+      figcaption{
+        display: block;
+        text-align: center;
+        
+      }*/
+
+      a{
+
+        position: relative;
+
+      }
+  }
+
+
+  /*exam page styling*/
+  #Exam{
+    font-family: 'AndyBold';
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+
+   figure {
+    
+    margin: 0;
+    width: 100%; /* Or a pixel value like 200px */
+    padding: 20px;
+        }
+
+    figure img {
+      display: inline-block;
+      width: 500px; /* Ensures the image doesn't overflow the figure */
+      height: auto;
+      border-radius: 0%;
+            }
+
+      figcaption{
         display: block;
         text-align: center;
         
@@ -156,6 +207,7 @@ z-index: 1000;
       a{
 
         position: relative;
+        
 
       }
   }
