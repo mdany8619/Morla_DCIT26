@@ -1,98 +1,117 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset=" UTF-8">
-        <title> My Little Portfolio </title>
-        <link rel="stylesheet" href="style.css"defer>
-       <!--  <script src="portfolio.js" defer></script>--> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maria Daniela Morla | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    <header>
-<ul> 
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+      <!--<div class="brand">Maria Daniela</div> -->  
+        <ul class="nav-list">
+          <li><a href="#AboutMe">About Me</a></li>
+          <li><a href="#Exam">Exams</a></li>
+          <li><a href="#Quiz">Quizzes</a></li>
+          <li><a href="#LabWorks">Lab Works</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<li> <a href="#AboutMe"> About Me </a></li>
-<li> <a href="#Exam"> Exams </a></li>
-<li > <a href="#Quiz"> Quizzes </a></li>
-<li> <a href="#LabWorks"> Lab Works </a></li>
-</ul>
+    <main class="container">
+      <section class="card hero" id="AboutMe">
+        <div class="hero-copy">
+          <p class="eyebrow">Computer Science Student</p>
+          <h1>Maria Daniela Morla</h1>
+          <p>
+            I am a 3rd-year Computer Science student at Cavite State University -
+            Silang Campus. I have not coded consistently in a while, and I am no
+            coding prodigy, but I am determined to finish my degree and keep
+            learning.
+          </p>
+          <p class="signature">Font familiar? This is from Terraria. Best game by the way. ^o^</p>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="portfolio-img" src="images/temp_image_92976F24-6929-4CE9-B65A-1D291762216E.jpeg" alt="Selfie of Maria Daniela Morla" id="ABimg" />
+        </div>
+      </section>
 
-</header>
-
-    <body class="LumpiaWrapper"> 
-   
- <!-- about me setion-->
-   <section class="AboutMe" id="AboutMe">
-        <h2> Maria Daniela Morla</h2>
-        <img src="images/temp_image_92976F24-6929-4CE9-B65A-1D291762216E.jpeg" alt="Selfie" id="ABimg">
-       
-    <p> I am a 3rd Yr Computer Science student at Cavite State University-Silang Campus. 
-            I haven't coded in a long time, and I'm no coding prodigy. I just want a degree at this point.
-            Font familiar? This is from Terraria. Best game by the way. \^o^/
-        </p>
-
-   </section>
-      
-   
-   <!-- exam setion-->
-   <section class="Exam" id="Exam">
-      <h2> Exams</h2>
-
-            <figure>
-            <img src="images/IMG_6769.jpeg" alt="midterm"> 
-                <figcaption>Midterm Exam</figcaption>
-            </figure>
-       
-
-    </section>
-
-
-
-
- <!-- Quiz section-->
-
- <section class="Quiz" id="Quiz">
-        <h2> Quizzes and Activities</h2>
-        <figure>
-            <img src="images/IMG_6365.jpeg" alt="front" style="border-radius: 0%;" width="500" height="500" > <img src="images/IMG_6366.jpeg" alt="back" style="border-radius: 0%;" width="500px" height="500px"> 
-         <figcaption>Quiz #1</figcaption>
+      <section class="card" id="Exam">
+        <h2>Exams</h2>
+        <figure class="gallery-item">
+          <img class="portfolio-img" src="images/IMG_6769.jpeg" alt="Midterm exam photo" />
+          <figcaption>Midterm Exam</figcaption>
         </figure>
-        
-            
-                
-        </section>
+      </section>
 
+      <section class="card" id="Quiz">
+        <h2>Quizzes and Activities</h2>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img class="portfolio-img" src="images/IMG_6365.jpeg" alt="Quiz front page" />
+          </figure>
+          <figure class="gallery-item">
+            <img class="portfolio-img" src="images/IMG_6366.jpeg" alt="Quiz back page" />
+          </figure>
+        </div>
+        <figcaption>Quiz #1</figcaption>
+      </section>
 
+      <section class="card" id="LabWorks">
+        <h2>Lab Works</h2>
+        <div class="empty-state">
+          <p>Nothing here yet, uwu.</p>
+        </div>
+      </section>
+    </main>
 
-
-   <!-- Lab works setion-->
-
-   <section class="LabWorks" id="LabWorks">
-      <h2> Lab Works</h2>
-      <figure>
-            <figcaption> nothing here yet uwu</figcaption>
-        </figure>
-       
-    </section>
-
-
-   </section>
-
-
-
-
-      <!-- <button class="button" id="abtMEbtn"> About Me </button> <button class="button" id="portBtn"> Portfolio </button> -->  
-     
-       
-        <div id="portBin"> 
-    <!-- <button>Quiz</button> <button>Activity</button>-->
-</div>
-
-
-    </body>
-    <footer>
-        <p> &copy; 2026 Maria Daniela Morla </p>
+    <footer class="site-footer">
+      <p>&copy; 2026 Maria Daniela Morla</p>
     </footer>
 
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Close image">&times;</button>
+      <img id="lightbox-image" src="" alt="Expanded portfolio image" />
+    </div>
 
+    <script>
+      const portfolioImages = document.querySelectorAll('.portfolio-img');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightbox-image');
+      const closeButton = document.querySelector('.lightbox-close');
+
+      function openLightbox(src, alt) {
+        lightboxImage.src = src;
+        lightboxImage.alt = alt;
+        lightbox.classList.add('visible');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('lightbox-open');
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('visible');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('lightbox-open');
+      }
+
+      portfolioImages.forEach((image) => {
+        image.addEventListener('click', () => openLightbox(image.src, image.alt));
+      });
+
+      closeButton.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && lightbox.classList.contains('visible')) {
+          closeLightbox();
+        }
+      });
+    </script>
+  </body>
 </html>
